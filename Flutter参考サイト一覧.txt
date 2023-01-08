@@ -1,0 +1,8 @@
+
+Jsonのサンプルデータを提供してくれるサイト
+https://jsonplaceholder.typicode.com/
+
+
+JsonからDartのModel変換コードを自動生成してくれるサイト
+https://app.quicktype.io/
+
