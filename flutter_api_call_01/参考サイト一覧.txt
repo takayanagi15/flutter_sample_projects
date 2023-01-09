@@ -1,0 +1,9 @@
+Jsonのサンプルデータを提供してくれるサイト
+https://jsonplaceholder.typicode.com/
+
+ランダムなユーザ情報を提供してくれるAPI
+https://randomuser.me/
+
+JsonからDartのModel変換コードを自動生成してくれるサイト
+https://app.quicktype.io/
+

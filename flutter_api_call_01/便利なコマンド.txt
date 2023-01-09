@@ -1,0 +1,16 @@
+
+## 1行消す
+Ctrl + Shift +k
+
+## ウィジェットをラップするショートカットキー：
+command + .
+
+## 次の行へ
+Ctrl + Enter
+
+
+
+## Pubspec assistの使い方
+1. Ctrl + Shift + pでコマンド入力画面の表示
+2. 「Pubspec Assist: Add/update dependency」を選択
+3. インストールしたいパッケージ名の全てまたは一部をタイプし、Enter
