@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../model/user_respons.dart';
@@ -7,7 +6,7 @@ class UserApi {
   static Future<UserRespons> fetchUsers() async {
     UserRespons userRespons;
 
-    print('fetchUsers called');
+    // print('fetchUsers called');
     const url = 'https://randomuser.me/api/?results=50';
     final uri = Uri.parse(url);
     final response = await http.get(uri);
@@ -17,7 +16,7 @@ class UserApi {
     // users = json['results'];
     userRespons = userResponsFromJson(body)!;
 
-    print('fetchUsers complted');
+    // print('fetchUsers complted');
 
     return userRespons;
   }

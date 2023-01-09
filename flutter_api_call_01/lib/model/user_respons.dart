@@ -307,23 +307,23 @@ class Name {
     required this.title,
     required this.first,
     required this.last,
+    required this.fullName,
   });
 
   String? title;
   String? first;
   String? last;
+  String? fullName;
 
   factory Name.fromJson(Map<String, dynamic> json) => Name(
         title: json["title"],
         first: json["first"],
         last: json["last"],
+        fullName: json["first"] + ' ' + json["last"],
       );
 
-  Map<String, dynamic> toJson() => {
-        "title": title,
-        "first": first,
-        "last": last,
-      };
+  Map<String, dynamic> toJson() =>
+      {"title": title, "first": first, "last": last, "fullName": fullName};
 }
 
 class Picture {

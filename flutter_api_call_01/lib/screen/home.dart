@@ -40,16 +40,17 @@ class _HomeScreenState extends State<HomeScreen> {
             // final name = user['name']['first'];
             // final email = user['email'];
             // final imageUrl = user['picture']['thumbnail'];
-            final name = result?.name?.last;
+            final name = result?.name?.fullName;
             final email = result?.email;
             final imageUrl = result?.picture?.thumbnail;
+            // final phone = result?.phone;
 
             return ListTile(
               leading: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.network(imageUrl!)),
-              title: Text(name!),
-              subtitle: Text(email!),
+              title: Text(name ?? ''),
+              subtitle: Text(email ?? ''),
             );
           }),
     );
