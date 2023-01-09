@@ -7,3 +7,9 @@ https://randomuser.me/
 JsonからDartのModel変換コードを自動生成してくれるサイト
 https://app.quicktype.io/
 
+#WEB版でImage.network(imageUrl!))がエラーとなる。
+#回避するためにコードを追加
+#対応方法は下記を参照
+#https://stackoverflow.com/questions/65653801/flutter-web-cant-load-network-image-from-another-domain
+
+
