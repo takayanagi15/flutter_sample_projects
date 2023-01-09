@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/home.dart';
+import 'package:flutter_api_call_01/screen/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      home: MenuScreen(),
     );
   }
 }
