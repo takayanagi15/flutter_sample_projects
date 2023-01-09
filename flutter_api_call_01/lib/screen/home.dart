@@ -1,6 +1,9 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:flutter_api_call_01/model/user_respons.dart';
 import 'package:flutter_api_call_01/services/user_api.dart';
+// import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,24 +38,29 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView.builder(
           itemCount: userRespons?.results?.length ?? 0,
           itemBuilder: (context, index) {
-            final result = userRespons?.results![index];
+            final Result? result = userRespons?.results![index];
             // final user = users[index];
             // final name = user['name']['first'];
             // final email = user['email'];
             // final imageUrl = user['picture']['thumbnail'];
-            final name = result?.name?.fullName;
-            final email = result?.email;
-            final imageUrl = result?.picture?.thumbnail;
+            // final name = result?.name?.fullName;
+            // final email = result?.email;
+            // final imageUrl = result?.picture?.thumbnail;
             // final phone = result?.phone;
 
-            return ListTile(
-              leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.network(imageUrl!)),
-              title: Text(name ?? ''),
-              subtitle: Text(email ?? ''),
+            // return UserList(imageUrl: imageUrl, name: name, email: email);
+            return UserListWidget(
+              result: result,
             );
           }),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.close),
+      //   onPressed: () {
+      //     GoRouter.of(context).push('/menu'); // スタックで操作する場合
+      //     // GoRouter.of(context).go('/menu'); // 現ルートと入れ替える場合
+      //     // context.go('/menu'); // 現ルートと入れ替える場合
+      //   },
+      // ),
     );
   }
 
@@ -71,4 +79,24 @@ class _HomeScreenState extends State<HomeScreen> {
 
   //   print('fetchUsers complted');
   // }
+}
+
+class UserListWidget extends StatelessWidget {
+  const UserListWidget({
+    Key? key,
+    required this.result,
+  }) : super(key: key);
+
+  final Result? result;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: ClipRRect(
+          borderRadius: BorderRadius.circular(100),
+          child: Image.network(result?.picture?.thumbnail ?? '')),
+      title: Text(result?.name?.fullName ?? ''),
+      subtitle: Text(result?.email ?? ''),
+    );
+  }
 }

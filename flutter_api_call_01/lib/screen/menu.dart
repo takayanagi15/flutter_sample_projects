@@ -1,6 +1,9 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:flutter_api_call_01/model/menu_resopns.dart';
 import 'package:flutter_api_call_01/services/menu_api.dart';
+// import 'package:go_router/go_router.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -36,24 +39,22 @@ class _MenuScreenState extends State<MenuScreen> {
       body: ListView.builder(
           itemCount: res?.menuList?.length ?? 0,
           itemBuilder: (context, index) {
-            // final MenuList menu = res?.menuList![index];
-            final menu = res?.menuList![index];
-            final menuTitle = menu!.title;
-            final menuSubTitle = menu.subTitle;
-            // final user = users[index];
-            // final name = user['name']['first'];
-            // final email = user['email'];
-            // final imageUrl = user['picture']['thumbnail'];
-            // final name = result?.name?.fullName;
-            // final email = result?.email;
-            // final imageUrl = result?.picture?.thumbnail;
-            // final phone = result?.phone;
+            final MenuList? menu = res?.menuList![index];
+            // final menuTitle = menu?.title ?? '';
+            // final menuSubTitle = menu?.subTitle ?? '';
 
-            return ListTile(
-              title: Text(menuTitle ?? ''),
-              subtitle: Text(menuSubTitle ?? ''),
+            return MenuWidget(
+              menu: menu,
             );
           }),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.close),
+      //   onPressed: () {
+      //     GoRouter.of(context).push('/'); // スタックで操作する場合
+      //     // GoRouter.of(context).go('/'); // 現ルートと入れ替える場合
+      //     //context.go('/tab'); // 現ルートと入れ替える場合
+      //   },
+      // ),
     );
   }
 
@@ -72,4 +73,25 @@ class _MenuScreenState extends State<MenuScreen> {
 
   //   print('fetchUsers complted');
   // }
+}
+
+class MenuWidget extends StatelessWidget {
+  const MenuWidget({
+    Key? key,
+    required this.menu,
+    // required this.menuTitle,
+    // required this.menuSubTitle,
+  }) : super(key: key);
+
+  final MenuList? menu;
+  // final String menuTitle;
+  // final String menuSubTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(menu?.title ?? ''),
+      subtitle: Text(menu?.subTitle ?? ''),
+    );
+  }
 }
