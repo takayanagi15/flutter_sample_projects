@@ -21,18 +21,18 @@ class Homepage extends StatelessWidget {
               return ListView(
                 children: [
                   ...data!.map((e) => InkWell(
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => DetailPage(
-                              e: e,
-                            ),
-                          ),
-                        ),
                         child: ListTile(
                           title: Text(e.firstname),
                           subtitle: Text(e.lastname),
                           trailing: CircleAvatar(
                             backgroundImage: NetworkImage(e.avatar),
+                          ),
+                        ),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(
+                              e: e,
+                            ),
                           ),
                         ),
                       ))
