@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "887184099901",
+    "project_id": "smart-talk-877fb",
+    "storage_bucket": "smart-talk-877fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887184099901:android:8fb889382cc2234a273854",
+        "android_client_info": {
+          "package_name": "com.timelessfusionapps.smart_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887184099901-uahkm28aukgtfhbvicj7j62c7cpneh0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyWRLovKCa9L3CIHU4eCKaziGHn_fDIrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887184099901-fee9s7hg1r9lvquovqqdjq11rkv9roo2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "887184099901-q35eqivkg1iugu2llvqbi3350gettof1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.timelessfusionapps.smartTalk"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887184099901:android:4f759a955c88e70a273854",
+        "android_client_info": {
+          "package_name": "jp.serendipy.smart_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887184099901-uahkm28aukgtfhbvicj7j62c7cpneh0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyWRLovKCa9L3CIHU4eCKaziGHn_fDIrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887184099901-fee9s7hg1r9lvquovqqdjq11rkv9roo2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "887184099901-q35eqivkg1iugu2llvqbi3350gettof1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.timelessfusionapps.smartTalk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
