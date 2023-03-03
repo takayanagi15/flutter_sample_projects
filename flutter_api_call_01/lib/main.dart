@@ -33,6 +33,7 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const _screens = [
+    // TABに対応したPageを定義する。
     HomeScreen(),
     MenuScreen(),
     // NotificationScreen(),
